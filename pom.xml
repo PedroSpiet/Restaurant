@@ -63,6 +63,7 @@
                 <artifactId>cm-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 

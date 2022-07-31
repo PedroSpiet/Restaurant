@@ -1,6 +1,4 @@
-package com.foodering.order.system.valueobject;
-
-import com.foodering.order.system.entity.BaseEntity;
+package com.food.ordering.order.system.valueobject;
 
 import java.util.UUID;
 

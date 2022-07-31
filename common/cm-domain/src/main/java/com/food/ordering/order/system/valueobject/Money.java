@@ -1,4 +1,4 @@
-package com.foodering.order.system.valueobject;
+package com.food.ordering.order.system.valueobject;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -6,6 +6,8 @@ import java.util.Objects;
 
 public class Money {
     private final BigDecimal value;
+
+    public static final Money ZERO = new Money(BigDecimal.ZERO);
 
     public Money(BigDecimal value) {
         this.value = value;
@@ -31,8 +33,8 @@ public class Money {
         return new Money(setScale(this.value.subtract(money.getValue())));
     }
 
-    public Money multiply(Money money) {
-        return new Money(setScale(this.value.multiply(money.getValue())));
+    public Money multiply(int quantity) {
+        return new Money(setScale(this.value.multiply(BigDecimal.valueOf(quantity))));
     }
 
     @Override
